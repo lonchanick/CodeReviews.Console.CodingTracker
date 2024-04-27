@@ -2,7 +2,7 @@
 
 namespace Lonchanick.CodingTracker;
 
-internal class Controller
+public class Controller
 {
     internal static void CreateNewRecord()
     {
@@ -85,7 +85,7 @@ internal class Controller
         AnsiConsole.Write(panel);
     }
 
-    public static void PrettyTable(List<CodingSession> sessions)
+    static void PrettyTable(List<CodingSession> sessions)
     {
         var table = new Table();
         table.AddColumn("Id");
@@ -122,7 +122,7 @@ internal class Controller
         return result;
     }
 
-    static DateTime GetValidDateTime(string param)
+    public static DateTime GetValidDateTime(string param)
     {
         string userInput = string.Empty;
         DateTime result;
